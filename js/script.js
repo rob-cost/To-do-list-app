@@ -8,4 +8,17 @@ list.append(li);
 let inputValue = $('#input').val();
 // Append the value to the element
 li.append(inputValue);
-li.addClass("strike");
+li.addClass("strike");// Creates a new item in the list
+function newItem (){
+
+    // Declare variable and delegation
+    let inputValue = $('#input').val();
+    let li = $('<li></li>');
+    li.append(inputValue);
+
+    // Make sure some value is inserted
+    if (inputValue === ''){
+        alert('please write something');
+    }
+    else {
+        $('#list').append(li);
